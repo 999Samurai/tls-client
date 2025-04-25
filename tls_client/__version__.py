@@ -4,8 +4,8 @@
 #   / / / (__  )_____/ /___/ / /  __/ / / / /_/ __/
 #  /_/ /_/____/      \____/_/_/\___/_/ /_/\__/____/
 
-__title__ = "tls_client"
+__title__ = "999tls_client"
 __description__ = "Advanced Python HTTP Client."
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __author__ = "Diogo Fernandes"
 __license__ = "MIT"

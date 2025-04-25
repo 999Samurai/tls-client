@@ -3,7 +3,7 @@ Python-TLS-Client is an advanced HTTP library based on requests and tls-client.
 
 # Installation
 ```
-pip install git+https://github.com/999Samurai/tls-client.git
+pip install 999tls-client
 ```
 
 # Disclaimer

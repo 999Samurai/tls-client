@@ -27,7 +27,7 @@ session = tls_client.Session(
     ],
     supported_versions=["GREASE", "1.3", "1.2"],
     key_share_curves=["GREASE", "X25519"],
-    cert_compression_algo="brotli",
+    cert_compression_algo=["brotli"],
     pseudo_header_order=[
         ":method",
         ":authority",

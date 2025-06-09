@@ -78,7 +78,7 @@ class Session:
                  supported_delegated_credentials_algorithms: Optional[List[str]] = None,
                  supported_versions: Optional[List[str]] = None,
                  key_share_curves: Optional[List[str]] = None,
-                 cert_compression_algo: str = None,
+                 cert_compression_algo: Optional[List[str]] = None,
                  additional_decode: str = None,
                  pseudo_header_order: Optional[List[str]] = None,
                  connection_flow: Optional[int] = None,
@@ -462,7 +462,7 @@ class Session:
 
         # https://bogdanfinn.gitbook.io/open-source-oasis/shared-library/payload
         request_payload = {
-            "additionalDecode": self.additional_decode,
+            # "additionalDecode": self.additional_decode,
             "catchPanics": self.catch_panics,
             # "certificatePinningHosts": None,
             # "customTlsClient": None,
@@ -523,7 +523,7 @@ class Session:
                 "ECHCandidatePayloads": None,
                 "alpnProtocols": None,
                 "alpsProtocols": None,
-                "certCompressionAlgo": self.cert_compression_algo,
+                "certCompressionAlgos": self.cert_compression_algo,
                 "connectionFlow": self.connection_flow,
                 "h2Settings": self.h2_settings,
                 "h2SettingsOrder": self.h2_settings_order,
@@ -604,6 +604,8 @@ class Session:
             response_string = response_bytes.decode('utf-8')
             response_object = loads(response_string)
             freeMemory(response_object['id'].encode('utf-8'))
+
+            print(response_object)
 
             # todo update for each Response
             elapsed = preferred_clock() - start

@@ -605,8 +605,6 @@ class Session:
             response_object = loads(response_string)
             freeMemory(response_object['id'].encode('utf-8'))
 
-            print(response_object)
-
             # todo update for each Response
             elapsed = preferred_clock() - start
 

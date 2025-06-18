@@ -1,6 +1,6 @@
 import requests
 
-shared_library_version = "1.9.1"
+shared_library_version = "1.10.0"
 github_download_url = "https://github.com//bogdanfinn/tls-client/releases/download/v{}/{}"
 github_repo_filenames = [
     # Windows
